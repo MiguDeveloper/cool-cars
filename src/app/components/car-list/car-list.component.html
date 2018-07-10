@@ -1,0 +1,29 @@
+<h2>
+  Lista de carros Cools!
+</h2>
+<!--
+<div *ngFor="let car of cars">
+  {{ car.name }}
+</div> -->
+
+<mat-card>
+  <button [routerLink]="['/car-add']" mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-card>
+
+<div class="car-container">
+  <mat-card *ngFor="let car of cars" class="card-content">
+    <mat-card-header>
+      <mat-card-title>{{car.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{car.name}}">
+
+    <mat-card-actions>
+      <button [routerLink]="['/car-edit', car.id]" mat-button>
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

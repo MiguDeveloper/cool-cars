@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.car-container{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card-content{
+  max-width: 200px;
+  margin: 16px;
+  box-sizing: border-box;
+}
+
+.mat-card-title{
+  color: #3653AF;
+}
